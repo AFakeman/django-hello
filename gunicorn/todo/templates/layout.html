@@ -1,0 +1,27 @@
+<html>
+  <head>
+    {% load static %}
+    {% block head %}
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}"/>
+      <title>{% block title %}ToDo List{% endblock %}</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="sidebar">
+       {% if user.is_authenticated %}
+         <a href="{% url 'log_out_action' %}">Log out</a><br>
+       {% else %}
+         <a href="{% url 'login_page' %}">Log in</a><br>
+         <a href="{% url 'register_page' %}">Sign up</a><br>
+       {% endif %}
+       <a href="{% url 'todo_view' %}">My ToDos</a><br>
+      </div>
+      <div class="main-content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

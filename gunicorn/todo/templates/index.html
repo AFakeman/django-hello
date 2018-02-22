@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    Welcome back, {{ user.username }}
+  {% else %}
+    Hi! Welcome to my website!
+  {% endif %}
+{% endblock %}

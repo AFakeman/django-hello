@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+}
+div.page-wrapper {
+  display: table;
+  table-layout: fixed;
+  min-height: 425px;
+  margin: 0;
+  width: 100%;
+}
+
+div.sidebar {
+  display: table-cell;
+  margin: 0;
+  width: 125px;
+  position: relative;
+}
+
+div.main-content {
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
